@@ -1,0 +1,45 @@
+For tetris, I should make it so that the find best move function actually finds the path to the best move. Then I can loop through those moves and watch the game play out.
+
+currently:
+ifmoveispossible
+	set point
+	set transform
+findbest()
+return point;
+
+should be:
+if(ismovepossible)
+	List<Moves> path = ispathpossible(x,y); //Don't forget to transform
+	if(path!=null)
+		set point
+		set transform
+		set path
+
+findbest() 
+return best.Path;
+
+
+ispathpossible(startingPoint, endingPoint){
+	List<Move> path
+	djiefnief whatever his name is
+
+	super(new int[] { 0, 1, 1, 2 }, new int[] { 0, 0, 1, 0 });
+	width = the number of non zero digits in first array
+	height = the largest value + 1 in second array
+	
+	for the map path algorithm, make the map nodes the size of the peice
+	so for instance, a 2x3 peice would mean you split the map into 2x3 pieces 
+
+	if(pathSeemsImpossible){
+		for(Transformation t : f.transformations){
+			//obv sudo code
+			f.rotate to t
+			path = isPathPossible(here, endingPoint)
+			if(path!=null)
+				return path
+		}
+		return null if we got here
+	}
+	return path 
+}
+		
